@@ -61,7 +61,9 @@ type Config struct {
 
 	// SMTP contains the information necessary to connect to a mail
 	// relay, so as to send verification email to registered nodes. If
-	// it is nil, then node registration will be disabled.
+	// it is nil, then node registration will be disabled. Can be changed
+        // to nil by deleting the SMTP block in the config and replacing it
+        // with `null,`
 	SMTP *struct {
 		// EmailAddress will be given as the "From" address when
 		// sending email.
